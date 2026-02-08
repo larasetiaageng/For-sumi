@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Sumi Lee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --card:#141414;
+      --text:#eaeaea;
+      --muted:#9b9b9b;
+      --accent:#bfa38a;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:'Inter', sans-serif;
+      line-height:1.8;
+    }
+
+    .container{
+      max-width:720px;
+      margin:auto;
+      padding:60px 24px;
+    }
+
+    section{
+      margin-bottom:80px;
+      opacity:0;
+      transform:translateY(20px);
+      animation:fadeUp 1.2s ease forwards;
+    }
+
+    section.delay1{animation-delay:.3s}
+    section.delay2{animation-delay:.6s}
+    section.delay3{animation-delay:.9s}
+    section.delay4{animation-delay:1.2s}
+
+    @keyframes fadeUp{
+      to{opacity:1; transform:none;}
+    }
+
+    h1,h2{
+      font-family:'Playfair Display', serif;
+      font-weight:400;
+      text-align:center;
+    }
+
+    h1{
+      font-size:28px;
+      margin-bottom:20px;
+    }
+
+    h2{
+      font-size:22px;
+      margin-bottom:30px;
+      color:var(--accent);
+    }
+
+    p{
+      font-size:16px;
+      color:var(--text);
+      margin-bottom:22px;
+    }
+
+    .muted{color:var(--muted);}
+
+    .card{
+      background:var(--card);
+      padding:32px;
+      border-radius:14px;
+    }
+
+    .poem{
+      font-family:'Playfair Display', serif;
+      font-style:italic;
+      text-align:center;
+      font-size:18px;
+    }
+
+    .photos{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:30px;
+    }
+
+    .photos img{
+      width:100%;
+      border-radius:16px;
+      filter:brightness(.85);
+    }
+
+    .music{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#1c1c1c;
+      padding:12px 16px;
+      border-radius:999px;
+      font-size:14px;
+      cursor:pointer;
+      color:var(--accent);
+    }
+
+    footer{
+      text-align:center;
+      font-size:14px;
+      color:var(--muted);
+      margin-top:60px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="bgm" loop>
+  <!-- GANTI LINK AUDIO DI SINI -->
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music" onclick="toggleMusic()">play quietly</div>
+
+<div class="container">
+
+  <!-- OPENING -->
+  <section>
+    <h1>In a world that feels a little broken,</h1>
+    <p class="muted" style="text-align:center;">there are still moments worth holding.</p>
+  </section>
+
+  <!-- NAME -->
+  <section class="delay1">
+    <h2>Sumi Lee</h2>
+  </section>
+
+  <!-- LETTER -->
+  <section class="delay2 card">
+    <p>사실,<br>이런 마음이 이렇게 찾아올 줄은 몰랐어요.<br>조용히, 하지만 분명하게요.</p>
+
+    <p>I didn’t plan for this.<br>
+    I didn’t expect that someone, so far away,<br>
+    could feel this close.</p>
+
+    <p>
+      Ada sesuatu dari caramu menunjukkan rasa,<br>
+      cara kamu dengan jujur mengatakan bahwa kamu menyukaiku,<br>
+      yang membuatku berhenti sejenak.
+    </p>
+
+    <p>
+      Itu sederhana, tapi hangat.<br>
+      Dan jujur saja, belum pernah ada seseorang yang melakukannya padaku dengan cara seperti itu.
+    </p>
+
+    <p>
+      Kamu melakukannya tanpa ragu,<br>
+      tanpa bersembunyi.<br>
+      Dan entah bagaimana, itu membuatku ingin lebih hadir.
+    </p>
+  </section>
+
+  <!-- POEM -->
+  <section class="delay3 card poem">
+    <p>
+      Aku ingin mencintaimu dengan sederhana,<br>
+      dengan kata yang tak sempat diucapkan<br>
+      kayu kepada api yang menjadikannya abu.
+    </p>
+  </section>
+
+  <!-- CONFESSION -->
+  <section class="delay4 card">
+    <p>
+      Some feelings don’t need grand gestures.<br>
+      They just need honesty.
+    </p>
+
+    <p>
+      I find myself slowly falling,<br>
+      not because of promises,<br>
+      but because of how you make me feel seen.
+    </p>
+
+    <p>
+      너와 함께 있으면 마음이 편안해져요.<br>
+      그게 지금의 나에게는 충분히 소중해요.
+    </p>
+
+    <p>
+      Ich weiß nicht, wohin das alles führt.<br>
+      Aber ich weiß, dass ich dich hier und jetzt sehr schätze.
+    </p>
+  </section>
+
+  <!-- PHOTOS -->
+  <section class="photos">
+    <!-- FOTO DIA -->
+    <img src="her.jpg" alt="Sumi Lee">
+    <!-- FOTO KAMU -->
+    <img src="me.jpg" alt="Lara">
+  </section>
+
+  <!-- CLOSING -->
+  <section>
+    <p style="text-align:center;">
+      I don’t need answers today.<br>
+      I just wanted you to know—<br><br>
+      that you matter to me.
+    </p>
+  </section>
+
+  <footer>
+    — Lara Setia Ageng S.S<br>
+    Jakarta, February 14th 2026
+  </footer>
+
+</div>
+
+<script>
+  const music = document.getElementById("bgm");
+  let playing = false;
+  function toggleMusic(){
+    if(!playing){
+      music.play();
+      document.querySelector(".music").innerText="pause";
+    }else{
+      music.pause();
+      document.querySelector(".music").innerText="play quietly";
+    }
+    playing=!playing;
+  }
+</script>
+
+</body>
+</html>
